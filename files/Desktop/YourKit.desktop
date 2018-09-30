@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YourKit
+Comment=
+Exec=/usr/local/yjp/bin/profiler.sh
+Icon=/usr/local/yjp/bin/profiler.ico
+Path=
+Terminal=false
+StartupNotify=false
