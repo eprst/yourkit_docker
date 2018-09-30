@@ -1,5 +1,18 @@
 FROM consol/centos-xfce-vnc
-LABEL maintainer="konstantin.sobolev@gmail.com"
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL maintainer="konstantin.sobolev@gmail.com" \
+      org.label-schema.name="yourkit" \
+      org.label-schema.description="YourKit Java profiler with XFCE desktop and VNC support" \
+      org.label-schema.url="https://github.com/eprst/yourkit_docker" \
+      org.label-schema.version="0.1" \
+      org.label-schema.docker-cmd="docker run -p 5901:5901 -p 6901:6901 ksobolev/yourkit" \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/eprst/yourkit_docker.git" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="1.0.0-rc1"
 
 ARG YJP_VERSION=2018.04
 ARG YJP_BUILD=83
