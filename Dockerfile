@@ -15,7 +15,7 @@ LABEL maintainer="konstantin.sobolev@gmail.com" \
       org.label-schema.schema-version="1.0.0-rc1"
 
 ARG YJP_VERSION=2018.04
-ARG YJP_BUILD=83
+ARG YJP_BUILD=86
 ARG JAVA_PACKAGE=java-1.8.0-openjdk
 
 ENV VNC_RESOLUTION 1400x768
