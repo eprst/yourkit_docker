@@ -9,7 +9,7 @@ Image comes without YourKit license, you will have to provide your own or reques
 Primary use case is opening large Java heap dumps on a beefy AWS EC2 instance.
 
 # Sample steps
-- create a EC2 instance with enough RAM, depending on your snapshot size
+- create a EC2 instance using Amazon Linux 2 AMI with enough RAM, depending on your snapshot size
 - run `ssh -i <private_key> -L 5901:localhost:5901 -L6901:localhost:6901 ec2-user@<external_ip> 'curl -o- https://raw.githubusercontent.com/eprst/yourkit_docker/master/amzn2_install.sh | bash'` where `<private_key>` is a path to the private key and `<external_ip>` is instance external IP
 - connect to VNC at `localhost:5901` or in a browser at [localhost:6901/vnc.html](http://localhost:6901/vnc.html), password is `vnc`
 
