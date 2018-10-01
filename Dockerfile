@@ -26,7 +26,8 @@ RUN curl -fsSL https://www.yourkit.com/download/YourKit-JavaProfiler-$YJP_VERSIO
     yum install -y $JAVA_PACKAGE unzip &&\
     unzip -o -d /usr/local /tmp/yourkit.zip  && \
     rm /tmp/yourkit.zip && \
-    ln -sf /usr/local/YourKit-JavaProfiler-$YJP_VERSION /usr/local/yjp
+    mv /usr/local/YourKit-JavaProfiler-$YJP_VERSION /usr/local/yjp && \
+    chown -R 1000 /usr/local/yjp
 
 COPY --chown=1000:root files/ /headless/
 
