@@ -19,6 +19,8 @@ Storage on `/dev/nvme0n1` will be mounted to `~/Snapshots` if present, this is a
 - ssh to your instance with VNC port forwarding: `ssh -i <private_key> -L 5901:localhost:5901 -L6901:localhost:6901 ec2-user@<external_ip>`
 - make sure Docker is installed and running
 - do a `docker run -d -p 5901:5901 -p 6901:6901 ksobolev/yourkit`
+- connect to VNC at `localhost:5901` or in a browser at [localhost:6901/vnc.html](http://localhost:6901/vnc.html), password is `vnc`
+
 
 # Extra configuration
 Docker environment variables:
@@ -31,4 +33,4 @@ Example:
 docker run -d -p 5901:5901 -p 6901:6901 -e VNC_PW=mypassword ksobolev/yourkit
 ```
 
-YourKit Java process is configured to use 12G of RAM by default. This can be configured in `~/.yjp/ui.ini` inside the container. Don't give it too much as there's also an off-heap process involved. 
+YourKit Java process is configured to use 12G of RAM by default. This can be changed in `~/.yjp/ui.ini` inside the container. Don't give it too much as there's also an off-heap process involved.
